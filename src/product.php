@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お菓子一覧</title>
+    <?php
+			$name = $_GET['key'] ?? null;
+			$kate = $_GET['kate'] ?? null;
+
+			if($name)
+				echo '<title>', $name, ' - 商品検索結果</title>';
+			else if($kate)
+				echo '<title>', $kate, ' - カテゴリ検索結果</title>';
+			else
+				echo '<title>トップ - 商品一覧</title>';
+
+		?>
 </head>
 <body>
 <body>
@@ -13,7 +24,16 @@
 		<?php require '../connect/db-connect.php'; ?>
       
 		<table class="menu">
-			<?php
+		<?php
+				if($name)
+				    $sql = $db -> query("SELECT * FROM Sweets WHERE syouhin_mei LIKE '%$name%'");	
+				else if($kate)
+					$sql = $db -> query("SELECT * FROM Sweets  WHERE syouhin_category LIKE '%$kate%'");
+					
+				else
+					$sql = $db -> query('SELECT * FROM Sweets');
+				$cnt = 0;
+			
 			
 				foreach($sql as $row){
 					$cnt++; // 1 2 3
