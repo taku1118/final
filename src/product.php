@@ -40,7 +40,7 @@
 					echo '<td><a href=product_detail.php?id=', $row['syouhin_id'],
 						 ' style=text-decoration:none;><img src="../img/', $row['syouhin_img'], 
 						 '" alt="', $row['syouhin_mei'],
-						 '"><br>',$row['syouhin_mei'],'<br>￥',$row['syohin_nedan'],'</a></td>';
+						 '"><br>',$row['syouhin_mei'],'<br>￥',$row['syouhin_nedan'],'</a></td>';
 					if($cnt % 3 == 0) echo '</tr><tr>';
 				}
 			?>
