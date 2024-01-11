@@ -43,7 +43,11 @@
 						 '"><br>',$row['syouhin_mei'],'<br>￥',$row['syouhin_nedan'],'</a></td>';
 					if($cnt % 3 == 0) echo '</tr><tr>';
 				}
-			?>
+		?>
+		<form action="insert.php">
+			<button>編集</button>
+		</form>
+
 		</table>
 	</body>
     
