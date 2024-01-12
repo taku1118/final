@@ -18,7 +18,7 @@
 </head>
 <body>
 <body>
-		<link rel="stylesheet" href="../css/header.css">
+		
 
 		
 		<?php require '../connect/db-connect.php'; ?>
