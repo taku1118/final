@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.menu {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.menu td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.menu img {
+    max-width: 100%;
+    max-height: 100px; /* 適切な高さに調整してください */
+    height: auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

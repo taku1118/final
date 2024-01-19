@@ -3,38 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品編集画面</title>
+    <title>商品登録</title>
+    <link rel="stylesheet" href="../css/insert.css">
 </head>
 <body>
-<body>
-        <?php require '../connect/db-connect.php'; ?>
-      
-		<table class="menu">
-        <?php
-			
-				$sql = $db -> query('SELECT * FROM Sweets');
-				$cnt = 0;
-			
-			
-				foreach($sql as $row){
-					$cnt++; // 1 2 3
-					echo '<td><a href=product_detail.php?id=', $row['syouhin_id'],
-						 ' style=text-decoration:none;><img src="../img/', $row['syouhin_img'], 
-						 '" alt="', $row['syouhin_mei'],
-						 '"><br>',$row['syouhin_mei'],'<br>￥',$row['syouhin_nedan'],'</a></td>
-                         <button action = edit.php>編集</button> ';
-                         
-					if($cnt % 3 == 0) echo '</tr><tr>';
-				}
-		?>
-		<form action="insert.php">
-			<button>戻る</button>
-		</form>
+<form action="top.php">
+    <button>トップへ</button>
+</form>
 
-		</table>
-	</body>
-    
-    
-    
+<?php require '../connect/db-connect.php' ?>
+<form action="insert_finish.php" method="post" enctype="multipart/form-data">
+<span class="yohaku">商品名　　</span><input type="text" class="text" name="pname" required><br>
+
+<span class="yohaku">カテゴリー</span>
+<select name="category" class="text" required>
+    <option value="" selected hidden required>選択してください</option>
+    <option value="0">なし</option>
+    <option value="1">スナック</option>
+    <option value="2">チョコ</option>
+</select><br>
+
+<span class="yohaku">値段　　　</span><input type="text" class="text" name="price" required><br>
+<span class="yohaku">商品画像　　</span><input type="file" class="filebutton" name="upload_image" accept="image/*" required><br>
+<input type="submit" class="button2" value="登録">
+</form>
 </body>
 </html>

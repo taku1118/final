@@ -1,0 +1,22 @@
+body {
+	margin: 0px;
+	text-align: center;
+}
+
+.img_btn {
+	height: 58px;
+}
+
+.headerbar {
+	margin: 0px;
+	padding: 8px 16px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.m1{
+	padding: 0 8px;
+}

@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.sakujo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.shohin {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.img1 {
+    max-width: 100%;
+    max-height: 100px; 
+    height: auto;
+}
+
+.itiran {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.itiran td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.yes, .no {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yes {
+    background-color: #e74c3c;
+}
+
+.no {
+    background-color: #3498db;
+    margin-left: 10px;
+}
+
+.yes:hover, .no:hover {
+    opacity: 0.8;
+}
